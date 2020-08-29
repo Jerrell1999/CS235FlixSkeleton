@@ -14,6 +14,8 @@ class WatchList:
             self.__watchlist.remove(movie)
 
     def select_movie_to_watch(self, index: int):
+        if index < 0:
+            return None
         try:
             return self.__watchlist[index]
         except:
